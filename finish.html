@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32"
+    href="https://dl.dropbox.com/s/3fzdvgvavp598ck/favicon-32x32.png?raw=1">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+  </script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="styles.css">
+  <title>Frontend Mentor | Intro component with sign up form</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div id="intro" class="col-lg-6 ">
+        <h3 class="title">
+          Learn to code by watching others
+        </h3>
+        <p class="desc">
+          See how experienced developers solve problems in real-time. Watching scripted tutorials is great,
+          but understanding how developers think is invaluable.
+        </p>
+      </div>
+      <div id="cta" class="col-lg-6 ">
+        <button class="btn btn-lg  btn-block btn-try">
+          Try it free 7 days <span class="small">then $20/mo. thereafter</span>
+        </button>
+        <form action="index.html" class="form needs-validation" novalidate>
+
+          <input type="text" required name="First-Name" id="first-name" class="form-control" placeholder="First Name">
+          <div class="invalid-feedback">
+            Please provide a valid First Name
+          </div>
+
+          <input type="text" required name="Last-Name" id="last-name" class="form-control" placeholder="Last Name">
+          <div class="invalid-feedback">
+            Please provide a valid Last Name
+          </div>
+          <input type="email" required name="Email" id="email" class="form-control" placeholder="Email Address">
+          <div class="invalid-feedback">
+            Please provide a valid Email Address
+          </div>
+          <input type="password" required name="Password" id="password" class="form-control" placeholder="Password">
+          <div class="invalid-feedback">
+            Please provide a valid Password
+          </div>
+
+          <input type="submit" class="btn btn-lg btn-block btn-claim text-uppercase mb-3" value="Claim your free trial">
+          </input>
+          <small class="terms-condition"> By clicking the button, you are agreeing to our <span
+              class="terms-services">Terms
+              and Services</span></small>
+        </form>
+      </div>
+    </div>
+    <footer>
+      <p class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. <br>
+        Coded by <a href="https://www.sololearn.com/Profile/10779261">Ashutosh Agrawal</a>.
+      </p>
+    </footer>
+  </div>
+  <style></style>
+  <script>
+    // Example starter JavaScript for disabling form submissions if there are invalid fields
+    (function () {
+      'use strict';
+      window.addEventListener('load', function () {
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        var forms = document.getElementsByClassName('needs-validation');
+        // Loop over them and prevent submission
+        var validation = Array.prototype.filter.call(forms, function (form) {
+          form.addEventListener('submit', function (event) {
+            if (form.checkValidity() === false) {
+              event.preventDefault();
+              event.stopPropagation();
+            }
+            form.classList.add('was-validated');
+          }, false);
+        });
+      }, false);
+    })();
+  </script>
+</body>
+
+</html>
